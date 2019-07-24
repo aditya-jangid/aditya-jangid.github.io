@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Slabo+27px');
+h1, h2, h3, h4, h5, h6, th{
+	font-family: 'Josefin Sans', sans-serif;
+}
+footer, a, li, p, td{
+	font-family: 'Slabo 27px', serif;
+	letter-spacing: 1px;
+	font-size: 1em;
+}
+.wrapper {
+  	display: flex;  
+  	flex-flow: row wrap;
+  	padding: 2em;
+  	margin-top: 6em;
+}
+
+.wrapper > * {
+  	padding: 15px;
+  	flex: 1 100%;
+}
+
+body{
+	line-height: 1.6;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: #888;
+}
+header{
+	box-shadow: -2px 2px 8px #333;
+	position: fixed;
+	margin: 0;
+	padding: 0 2em;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+}
+h2{
+	margin: 50px 0px;
+	text-align: center;
+	border: 1px solid #000;
+	padding: 1em;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+h3{
+	background-color: #A9A9B1;
+	padding: 0.5em;
+	border-left: 5px solid black;
+}
+.main {
+  	text-align: left;
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  	margin: 10px 0px;
+}
+
+@media all and (min-width: 600px) {
+  	.aside { 
+  	flex: 1 auto;
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  
+  }
+}
+
+@media all and (min-width: 800px) {
+	.main    { 
+  	flex: 15 0px;
+  	margin-right: 10px; 
+  	}
+  	.main    { 
+  	order: 1; 
+  	}
+  	.aside { 
+  	order: 2;
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); 
+  	margin: 10px 0px;
+  	}
+  	footer  { 
+  	order: 3;
+  	text-align: center;
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); 
+  }
+}
+
+@media all and (max-width: 500px) {
+  	.aside { 
+  	flex: 1 auto;
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); 
+  }
+  	footer  { 
+  	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); 
+  }
+  	header{
+  	text-align: center;
+  	padding: 0;
+  }
+  .wrapper{
+  	margin-top: 15em;
+  }
+  .main{
+  	width: 90%;
+  }
+  .infotable{
+  	width: 80%;
+  }
+}
+.infotable{
+	border-collapse: collapse;
+	width: 90%;
+	margin: auto;
+	overflow-x: auto;
+}
+.infotable th , .infotable td{
+	border: 2px solid #ddd;
+	padding: 10px;
+}
+.infotable th{
+	padding-top: 12px 0px;
+    background-color: #555;
+    color: white;
+    text-transform: uppercase;
+}
+.infotable tr:hover{
+	background-color: #A9A9B1;
+}
+.fa{
+	margin: 2px;
+	color: black;
+	transition: 0.5s;
+	padding: 0px 6px;
+}
+.fa:hover{
+	transform: scale(2.0);
+}
+.text-center{
+	text-align: center;
+}
+ul{
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+.navbar-right{
+	float: right;
+}
+.navbar a{
+	padding: 1em 20px;
+	margin: 1em;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	float: left;
+	border: 1px solid #bbb;
+	display: inline-block;
+	transition: 0.5s;
+}
+.navbar h1{
+	float: left;
+}
+.navbar a:hover{
+	background-color: #fff;
+	color: #000;
+}
+.dropdown{
+	margin-right: 3em;
+	display: inline-block;
+	position: relative;
+}
+.dropdown-data {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+    top: 80px;
+}
+.dropdown-data a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-data a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.dropdown:hover .dropdown-data {
+    display: block;
+    right: 0;
+}
+.aside .image{
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 100px;
+}
+::selection {
+    color: white; 
+    background: black;
+}
+
